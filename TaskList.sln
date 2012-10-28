@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskList", "TaskList\TaskList.csproj", "{D1D91A21-948F-4ACA-9341-4160C4BC909C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScheduledTaskAgent2", "ScheduledTaskAgent2\ScheduledTaskAgent2.csproj", "{1ED0B52A-7D99-4A2C-BB11-58618A1C6EBD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D1D91A21-948F-4ACA-9341-4160C4BC909C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1D91A21-948F-4ACA-9341-4160C4BC909C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1D91A21-948F-4ACA-9341-4160C4BC909C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D1D91A21-948F-4ACA-9341-4160C4BC909C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1D91A21-948F-4ACA-9341-4160C4BC909C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1D91A21-948F-4ACA-9341-4160C4BC909C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{1ED0B52A-7D99-4A2C-BB11-58618A1C6EBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED0B52A-7D99-4A2C-BB11-58618A1C6EBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED0B52A-7D99-4A2C-BB11-58618A1C6EBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED0B52A-7D99-4A2C-BB11-58618A1C6EBD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
