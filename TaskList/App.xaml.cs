@@ -78,8 +78,6 @@ namespace TaskList
         {
             LabelInfo = (string)DataStorage.GetInstance().LoadData(m_LabelInfo);
 
-//             mainPage.LoadData();
-            //CheckTrialMode();
         }
 
         // Code to execute when the application is activated (brought to foreground)
@@ -87,8 +85,6 @@ namespace TaskList
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             // Ensure that application state is restored appropriately
-            //CheckTrialMode();
-//             mainPage.LoadData();
 
         }
 
@@ -164,35 +160,6 @@ namespace TaskList
 
         #endregion
 
-        LicenseInformation _licenseInformation = new LicenseInformation();
-
-        private void CheckTrialMode()
-        {
-#if DEBUG
-            string message = "This sample demonstrates the implementation of a trial mode in an application. Press 'OK' to simulate trial mode. Press 'Cancel' to run the application in normal mode.";
-            if (MessageBox.Show(message, "Debug Trial",
-                 MessageBoxButton.OKCancel) == MessageBoxResult.OK)
-            {
-                _isTrial = true;
-            }
-            else
-            {
-                _isTrial = false;
-            }
-#else
-            _isTrial = _licenseInformation.IsTrial();
-
-#endif
-        }
-
-        bool _isTrial = false;
-        public bool IsTrial
-        {
-            get
-            {
-                return _isTrial;
-            }
-        }
 
     }
 }
