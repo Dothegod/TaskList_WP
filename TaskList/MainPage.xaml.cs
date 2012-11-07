@@ -155,7 +155,7 @@ namespace TaskList
 
         private void initAppBar()
         {
-            (ApplicationBar.Buttons[0] as ApplicationBarIconButton).Text = LanguageContent.GetInstance().New;
+//             (ApplicationBar.Buttons[0] as ApplicationBarIconButton).Text = LanguageContent.GetInstance().New;
             (ApplicationBar.MenuItems[0] as ApplicationBarMenuItem).Text = LanguageContent.GetInstance().NewList;
             (ApplicationBar.MenuItems[1] as ApplicationBarMenuItem).Text = LanguageContent.GetInstance().DelList;
             (ApplicationBar.MenuItems[2] as ApplicationBarMenuItem).Text = LanguageContent.GetInstance().About;

@@ -24,7 +24,7 @@ namespace TaskList
         /// <returns>The root frame of the Phone Application.</returns>
         public PhoneApplicationFrame RootFrame { get; private set; }
 
-        public static string version = "2.3";
+        public static string version = "2.4";
         private static string CurrUpdateinfo = "";
         private static string HistoryUpdateInfo = "";
 

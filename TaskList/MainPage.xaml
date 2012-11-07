@@ -156,7 +156,7 @@
     <!--Sample code showing usage of ApplicationBar-->
     <phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True" Opacity="1" ForegroundColor="Snow" Mode="Minimized" BackgroundColor="DodgerBlue">
-            <shell:ApplicationBarIconButton IconUri="/icons/appbar.new.rest.png" Text="new"  Click="ApplicationBarAddTask" x:Name="AppbarBtnAdd" />
+            <!--<shell:ApplicationBarIconButton IconUri="/icons/appbar.new.rest.png" Text="new"  Click="ApplicationBarAddTask" x:Name="AppbarBtnAdd" />-->
             <shell:ApplicationBar.MenuItems>
                 <shell:ApplicationBarMenuItem Text="New List" Click="ApplicationBarMenuItem_Click_AddNewList" x:Name="AppBarmenuAddList" />
                 <shell:ApplicationBarMenuItem Text="Delete List" Click="ApplicationBarMenuItem_Click_DelList" x:Name="AppBarMenuDelList" />
