@@ -69,8 +69,8 @@ namespace TaskList
         {
             ListBox lb = new ListBox();
             TaskItem ti = new TaskItem();
-            ti.textBoxTaskInfo.Text = LanguageContent.GetInstance().TextItemHit;
-            ti.textBoxTaskInfo.Foreground = new SolidColorBrush(Colors.DarkGray);
+            ti.textboxTaskContent.Text = LanguageContent.GetInstance().TextItemHit;
+            ti.textboxTaskContent.Foreground = new SolidColorBrush(Colors.DarkGray);
             lb.Items.Add(ti);
 
             PivotItem p = CreatePivot(Header);
@@ -178,7 +178,7 @@ namespace TaskList
                 foreach (TaskIteminfo ItemInfo in ListInfo.Items)
                 {
                     TaskItem Item = new TaskItem();
-                    Item.textBoxTaskInfo.Text = ItemInfo.Content;
+                    Item.textboxTaskContent.Text = ItemInfo.Content;
                     Item.IsFinished = ItemInfo.IsFinish;
                     Item.Notes = ItemInfo.Note;
                     Item.IsPriority = ItemInfo.IsPriority;
@@ -206,7 +206,7 @@ namespace TaskList
                 foreach (TaskItem Item in Itemlist.Items)
                 {
                     TaskIteminfo ItemInfo;
-                    ItemInfo.Content = Item.textBoxTaskInfo.Text;
+                    ItemInfo.Content = Item.textboxTaskContent.Text;
                     ItemInfo.IsFinish = Item.IsFinished;
                     ItemInfo.Note = Item.Notes;
                     ItemInfo.IsPriority = Item.IsPriority;
@@ -239,7 +239,7 @@ namespace TaskList
                 return;
             }
             TaskItem item = new TaskItem();
-            item.textBoxTaskInfo.Text = TextBoxTaskInfo.Text;
+            item.textboxTaskContent.Text = TextBoxTaskInfo.Text;
             TextBoxTaskInfo.Text = "";
             PivotItem Item = (PivotItem)PivotTask.SelectedItem;
             if (Item == null)
@@ -306,6 +306,11 @@ namespace TaskList
             }
         }
         #endregion
+
+        private void TextBoxTaskInfo_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+
+        }
 
     }
 }

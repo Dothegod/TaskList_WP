@@ -41,8 +41,8 @@ namespace TaskList
         }
         private void AddReminder()
         {
-            Reminder reminder = new Reminder(App.CurrentItem.textBoxTaskInfo.Text);
-            reminder.Title = App.CurrentItem.textBoxTaskInfo.Text;
+            Reminder reminder = new Reminder(App.CurrentItem.textboxTaskContent.Text);
+            reminder.Title = App.CurrentItem.textboxTaskContent.Text;
             reminder.Content = App.CurrentItem.Notes;
             reminder.BeginTime = App.CurrentItem.date;
             reminder.ExpirationTime = App.CurrentItem.date;

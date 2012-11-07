@@ -117,7 +117,7 @@ namespace TaskList
             buttonDel.Visibility = Visibility.Collapsed;
             textBlockNotes.Text = "";
             textBlockNotes.Visibility = Visibility.Collapsed;
-            textBoxTaskInfo.Text = "";
+            textboxTaskContent.Text = "";
             IsPriority = false;
 
             buttonPrio.Content = LanguageContent.GetInstance().Priority;
@@ -132,46 +132,29 @@ namespace TaskList
             (this.Parent as ListBox).Items.Remove(this);
         }
 
-        private void EditTextBoxTaskInfo(object sender, GestureEventArgs e)
+        private void EditTask()
         {
             if (!IsFinished)
             {
-                textBoxTaskInfo.IsReadOnly = !textBoxTaskInfo.IsReadOnly;
-                textBoxTaskInfo.Focus();
-                textBoxTaskInfo.SelectionStart = textBoxTaskInfo.Text.Length;
-                if (textBoxTaskInfo.Text == LanguageContent.GetInstance().TextItemHit)
-                {
-                    textBoxTaskInfo.Text = "";
-                }
+                textboxTaskContent.IsReadOnly = !textboxTaskContent.IsReadOnly;
+                textboxTaskContent.Focus();
+                textboxTaskContent.SelectionStart = textboxTaskContent.Text.Length;
 
             }
             UpdateTextColor();
         }
 
-
-//         private void ChangeTextBoxTaskInfoState(object sender, GestureEventArgs e)
-//         {
-//             GridConfig.Visibility = Visibility.Collapsed;
-//             if (!textBoxTaskInfo.IsReadOnly || textBoxTaskInfo.Text == "")
-//             {
-//                 return;
-//             }
-//             IsFinished = !IsFinished;
-//             UpdateTextColor();
-//             
-//         }
-
         public void UpdateTextColor()
         {
             if (IsFinished)
             {
-                textBoxTaskInfo.Foreground = new SolidColorBrush(Colors.DarkGray);
+                textboxTaskContent.Foreground = new SolidColorBrush(Colors.DarkGray);
                 buttonDel.Visibility = Visibility.Visible;
                 GridPriority.Visibility = Visibility.Collapsed;
             }
             else
             {
-                textBoxTaskInfo.Foreground = new SolidColorBrush(Colors.Black);
+                textboxTaskContent.Foreground = new SolidColorBrush(Colors.Black);
                 buttonDel.Visibility = Visibility.Collapsed;
             }
         }
@@ -180,7 +163,7 @@ namespace TaskList
         {
             if (e.PlatformKeyCode == 13)
             {
-                textBoxTaskInfo.IsReadOnly = !textBoxTaskInfo.IsReadOnly;
+                textboxTaskContent.IsReadOnly = !textboxTaskContent.IsReadOnly;
             }
         }
 
@@ -205,10 +188,6 @@ namespace TaskList
         private void buttonComplete_Click(object sender, RoutedEventArgs e)
         {
             GridConfig.Visibility = Visibility.Collapsed;
-//             if (!textBoxTaskInfo.IsReadOnly || textBoxTaskInfo.Text == "")
-//             {
-//                 return;
-//             }
             IsFinished = !IsFinished;
             checkboxComplete.IsChecked = IsFinished;
             UpdateTextColor();
@@ -221,13 +200,10 @@ namespace TaskList
 
         private void buttonEdit_Click(object sender, RoutedEventArgs e)
         {
-            EditTextBoxTaskInfo(sender, null);
+            EditTask();
+
         }
 
-        private void UserControl_LostFocus(object sender, RoutedEventArgs e)
-        {
-//             GridConfig.Visibility = Visibility.Collapsed;
-        }
 
 
     }

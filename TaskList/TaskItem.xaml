@@ -5,7 +5,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
-    FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource BlueFontKey}" xmlns:my="clr-namespace:TaskList" Margin="0,5,0,0" LostFocus="UserControl_LostFocus">
+    FontSize="{StaticResource PhoneFontSizeNormal}" Foreground="{StaticResource BlueFontKey}" xmlns:my="clr-namespace:TaskList" Margin="0,5,0,0">
     <UserControl.Resources>
         <ControlTemplate x:Key="PhoneDisabledTextBoxTemplate" TargetType="TextBox">
             <ContentControl x:Name="ContentElement" BorderThickness="0" HorizontalContentAlignment="Stretch" Margin="{StaticResource PhoneTextBoxInnerMargin}" Padding="{TemplateBinding Padding}" VerticalContentAlignment="Stretch"/>
@@ -278,14 +278,14 @@
                         <ImageBrush ImageSource="/TaskList;component/icons/proi.png" />
                     </HyperlinkButton.Background>
                 </HyperlinkButton>
-                <HyperlinkButton Content="Edit" Name="buttonEdit" Template="{StaticResource ConfigButtonTemplate}" Foreground="{StaticResource BlueFontKey}" FontSize="15" Margin="20,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="70" Click="buttonEdit_Click">
-                    <HyperlinkButton.Background>
-                        <ImageBrush ImageSource="/TaskList;component/icons/Edit.png" />
-                    </HyperlinkButton.Background>
-                </HyperlinkButton>
                 <HyperlinkButton HorizontalAlignment="Center" Name="buttonReminder" VerticalAlignment="Center"  ClickMode="Release" Content="Reminder" BorderThickness="1" Foreground="{StaticResource BlueFontKey}" Template="{StaticResource ConfigButtonTemplate}" FontSize="15" Margin="20,0,0,0" MinWidth="70" NavigateUri="/Remind.xaml" Click="buttonNotes_Click">
                     <HyperlinkButton.Background>
                         <ImageBrush ImageSource="/TaskList;component/icons/remind.png" />
+                    </HyperlinkButton.Background>
+                </HyperlinkButton>
+                <HyperlinkButton Content="Edit" x:Name="buttonEdit" Template="{StaticResource ConfigButtonTemplate}" Foreground="{StaticResource BlueFontKey}" FontSize="15" Margin="20,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="70" Click="buttonEdit_Click">
+                    <HyperlinkButton.Background>
+                        <ImageBrush ImageSource="/TaskList;component/icons/Edit.png" />
                     </HyperlinkButton.Background>
                 </HyperlinkButton>
                 <HyperlinkButton HorizontalAlignment="Center" Name="buttonNotes" VerticalAlignment="Center"  ClickMode="Release" Content="Notes" BorderThickness="1" Foreground="{StaticResource BlueFontKey}" Template="{StaticResource ConfigButtonTemplate}" FontSize="15" Margin="20,0,0,0" Click="buttonNotes_Click" NavigateUri="/Notes.xaml" MinWidth="70">
@@ -293,7 +293,7 @@
                         <ImageBrush ImageSource="/TaskList;component/icons/notes.png" />
                     </HyperlinkButton.Background>
                 </HyperlinkButton>
-                <HyperlinkButton HorizontalAlignment="Center" Name="buttonComplete" VerticalAlignment="Center"  ClickMode="Release" Content="Finish" BorderThickness="1" Foreground="{StaticResource BlueFontKey}" Template="{StaticResource ConfigButtonTemplate}" FontSize="15" Margin="20,0,0,0" MinWidth="70" Click="buttonComplete_Click">
+                <HyperlinkButton HorizontalAlignment="Center" Name="buttonComplete" VerticalAlignment="Center"  ClickMode="Release" Content="Finish" BorderThickness="1" Foreground="{StaticResource BlueFontKey}" Template="{StaticResource ConfigButtonTemplate}" FontSize="15" Margin="20,0,0,0" MinWidth="70" Click="buttonComplete_Click" Visibility="Collapsed">
                     <HyperlinkButton.Background>
                         <ImageBrush ImageSource="/TaskList;component/icons/Finish.png" />
                     </HyperlinkButton.Background>
@@ -321,7 +321,7 @@
         		<Grid Grid.Column="0" Width="10" Background="Red" x:Name="GridPriority" />
                 <CheckBox Grid.Column="1" Name="checkboxComplete" Style="{StaticResource CheckBoxStyle1}" IsChecked="False" Click="buttonComplete_Click" />
         		<StackPanel Grid.Column="2" Tap="textBoxTaskInfo_Tap">
-        			<TextBox x:Name="textBoxTaskInfo" VerticalAlignment="Stretch" Style="{StaticResource TextBoxStyle1}" FontSize="36" IsEnabled="True" Foreground="{StaticResource DarkGrayBrushKey}" IsReadOnly="True" BorderThickness="0" HorizontalScrollBarVisibility="Visible" TextWrapping="Wrap" KeyDown="textBoxTaskInfo_KeyDown" Hold="EditTextBoxTaskInfo" Grid.ColumnSpan="1" Text="taskinfo" />
+        			<TextBox x:Name="textboxTaskContent" VerticalAlignment="Stretch" Style="{StaticResource TextBoxStyle1}" FontSize="36" IsEnabled="True" Foreground="{StaticResource DarkGrayBrushKey}" IsReadOnly="True" BorderThickness="0" HorizontalScrollBarVisibility="Visible" TextWrapping="Wrap" KeyDown="textBoxTaskInfo_KeyDown" Grid.ColumnSpan="1" Text="taskinfo" />
         			<TextBlock FontSize="18" x:Name="textBlockNotes" Text="123" Foreground="Gray" Margin="10,0,0,0" Height="24" />
         		</StackPanel>
         	</Grid>

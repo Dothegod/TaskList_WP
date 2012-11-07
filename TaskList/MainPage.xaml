@@ -121,7 +121,7 @@
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="Auto" />
                         </Grid.ColumnDefinitions>
-                        <TextBox Template="{StaticResource PhoneDisabledTextBoxTemplate}" Foreground="{StaticResource DarkGrayBrushKey}" Name="TextBoxTaskInfo" KeyDown="TextBoxTaskInfo_KeyDown" />
+                        <TextBox Template="{StaticResource PhoneDisabledTextBoxTemplate}" Foreground="{StaticResource DarkGrayBrushKey}" Name="TextBoxTaskInfo" KeyDown="TextBoxTaskInfo_KeyDown" MouseLeftButtonDown="TextBoxTaskInfo_MouseLeftButtonDown" />
                         <HyperlinkButton VerticalAlignment="Stretch" Grid.Column="1" Background="{StaticResource BlueFontKey}" Width="60" Click="HyperlinkButton_Click">
                             <HyperlinkButton.OpacityMask>
                                 <ImageBrush Stretch="None" ImageSource="/TaskList;component/icons/appbar.add.rest.png"/>

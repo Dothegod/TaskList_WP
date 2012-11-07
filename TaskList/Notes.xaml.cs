@@ -21,7 +21,7 @@ namespace TaskList
             InitializeComponent();
             CurrItem = App.CurrentItem;
             textBoxNotes.Text = CurrItem.Notes;
-            textBlockTitle.Text = CurrItem.textBoxTaskInfo.Text;
+            textBlockTitle.Text = CurrItem.textboxTaskContent.Text;
         }
 
         private void ApplicationBarIconButton_Click(object sender, EventArgs e)

@@ -53,7 +53,7 @@ namespace TaskList
                 PivotHeader = "列表名称";
                 NewList = "新建列表";
                 DelList = "删除当前列表";
-                TextItemHit = "长按可编辑";
+                TextItemHit = "我想要……";
                 BuyMsgTitle = "购买软件";
                 BuyMsg = "您使用的是免费版本，最多只能使用两个列表，需要购买正式版吗？";
                 DelTaskListInfo = "你确信要删除任务列表吗？";
@@ -82,7 +82,7 @@ namespace TaskList
                 PivotHeader = "List Name";
                 NewList = "New List";
                 DelList = "Remove Current List";
-                TextItemHit = "Hold to edit";
+                TextItemHit = "I want ...";
                 BuyMsgTitle = "BUY IT";
                 BuyMsg = "Free version supports two lists at most, buy a full version?";
                 DelTaskListInfo = "Are you sure to delete task list?";
