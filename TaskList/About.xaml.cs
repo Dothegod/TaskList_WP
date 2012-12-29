@@ -14,6 +14,7 @@ namespace TaskList
         public About()
         {
             InitializeComponent();
+            Refresh();
         }
         private void hyperlinkButton1_Click(object sender, RoutedEventArgs e)
         {
@@ -29,20 +30,8 @@ namespace TaskList
             Rt.Show();
         }
 
-        private void UserControl_Loaded(object sender, RoutedEventArgs e)
-        {
-            Refresh();
-        }
         public void Refresh()
         {
-//             textblockUpdateInfo.Text = UpdateInfo;
-//             textBlockVersion.Text = "Version: " + AppVersion;
-//             textBlockVersion.Foreground = this.Foreground;
-//             textBlockAuthor.Foreground = this.Foreground;
-//             //             textBlockEmail.Foreground = this.Foreground;
-//             hyperlinkButton1.Foreground = this.Foreground;
-//             hyperlinkButtonReview.Foreground = this.Foreground;
-//             hyperlinkButtonApp.Foreground = this.Foreground;
             string CultureName = Thread.CurrentThread.CurrentCulture.Name;
             if ("zh-CN" == CultureName || "zh-SG" == CultureName || "zh-TW" == CultureName || "zh-HK" == CultureName)
             {

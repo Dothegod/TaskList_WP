@@ -157,6 +157,8 @@ namespace TaskList
                 textboxTaskContent.Foreground = new SolidColorBrush(Colors.Black);
                 buttonDel.Visibility = Visibility.Collapsed;
             }
+            checkboxComplete.IsChecked = IsFinished;
+
         }
 
         private void textBoxTaskInfo_KeyDown(object sender, KeyEventArgs e)
