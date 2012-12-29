@@ -7,10 +7,6 @@ namespace TaskList
 {
     public partial class About : PhoneApplicationPage
     {
-//         public string AppName { get; set; }
-//         public string AppVersion { get; set; }
-//         public bool IsChn { get; set; }
-//         public string UpdateInfo { set; get; }
         public About()
         {
             InitializeComponent();
@@ -32,6 +28,7 @@ namespace TaskList
 
         public void Refresh()
         {
+            textBlockVersion.Text = "Version" + App.version;
             string CultureName = Thread.CurrentThread.CurrentCulture.Name;
             if ("zh-CN" == CultureName || "zh-SG" == CultureName || "zh-TW" == CultureName || "zh-HK" == CultureName)
             {

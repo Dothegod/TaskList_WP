@@ -19,15 +19,11 @@
     </phone:PhoneApplicationPage.Foreground>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="{StaticResource WhiteBrushKey}">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="400*" />
-            <RowDefinition Height="130*" />
-        </Grid.RowDefinitions>
-        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="15,10,0,0" Name="textBlockVersion" Text="Version: 1.1.0" VerticalAlignment="Top" Width="224" />
-        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="15,66,0,0" Name="textBlockAuthor" Text="Created by HighFunStudio" VerticalAlignment="Top" />
-        <HyperlinkButton Content="HighFunStudio@hotmail.com" FontSize="28" HorizontalAlignment="Left" Margin="10,133,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Click="hyperlinkButton1_Click" Foreground="{StaticResource BluePvoitKey}" />
-        <HyperlinkButton Content="Review This Application" FontSize="32" HorizontalAlignment="Left" Margin="10,200,0,0" Name="hyperlinkButtonReview" VerticalAlignment="Top" Click="hyperlinkButton2_Click" Foreground="{StaticResource BluePvoitKey}" />
-        <HyperlinkButton Content="More Applications!" HorizontalAlignment="Center" Name="hyperlinkButtonApp" VerticalAlignment="Top" FontSize="32" Click="hyperlinkButtonApp_Click" Margin="0,284,0,0" Foreground="{StaticResource BluePvoitKey}" />
+        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="15,48,0,0" Name="textBlockVersion" Text="Version: 1.1.0" VerticalAlignment="Top" Width="224" />
+        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="15,104,0,0" Name="textBlockAuthor" Text="Created by HighFunStudio" VerticalAlignment="Top" />
+        <HyperlinkButton Content="HighFunStudio@hotmail.com" FontSize="28" HorizontalAlignment="Left" Margin="10,171,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Click="hyperlinkButton1_Click" Foreground="{StaticResource BluePvoitKey}" />
+        <HyperlinkButton Content="Review This Application" FontSize="32" HorizontalAlignment="Left" Margin="10,238,0,0" Name="hyperlinkButtonReview" VerticalAlignment="Top" Click="hyperlinkButton2_Click" Foreground="{StaticResource BluePvoitKey}" />
+        <HyperlinkButton Content="More Applications!" HorizontalAlignment="Center" Name="hyperlinkButtonApp" VerticalAlignment="Top" FontSize="32" Click="hyperlinkButtonApp_Click" Margin="95,322,94,0" Foreground="{StaticResource BluePvoitKey}" />
         <TextBlock Name="textblockUpdateInfo" Grid.Row="1" Margin="20,10" TextWrapping="Wrap" />
     </Grid>
  
