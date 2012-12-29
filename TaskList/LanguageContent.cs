@@ -67,7 +67,7 @@ namespace TaskList
                 Version = "版本";
                 Setting = "设置";
                 Author = "Created by HighFunStudio";
-                About = "关于";
+                About = "给个好评吧，亲！";
 
             }
             else
@@ -96,7 +96,7 @@ namespace TaskList
 
                 Version = "Version";
                 Author = "Created by HighFunStudio";
-                About = "About";
+                About = "Review";
                 Setting = "Setting";
             }
         }

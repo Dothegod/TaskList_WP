@@ -8,33 +8,27 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     FontFamily="{StaticResource PhoneFontFamilyNormal}"
     FontSize="{StaticResource PhoneFontSizeNormal}"
-    Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="800" d:DesignWidth="480"
     shell:SystemTray.IsVisible="False" xmlns:my1="clr-namespace:Microsoft.Phone.Controls.Maps.Overlays;assembly=Microsoft.Phone.Controls.Maps" xmlns:my2="clr-namespace:Microsoft.Phone.Controls.Maps;assembly=Microsoft.Phone.Controls.Maps">
     <phone:PhoneApplicationPage.Resources>
         <SolidColorBrush x:Key="DarkGrayBrushKey">#FF2F2F31</SolidColorBrush>
     </phone:PhoneApplicationPage.Resources>
+    <phone:PhoneApplicationPage.Foreground>
+        <StaticResource ResourceKey="BluePvoitKey"/>
+    </phone:PhoneApplicationPage.Foreground>
     <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="{StaticResource WhiteBrushKey}">
-        <!--ContentPanel - place additional content here-->
-        <TextBlock HorizontalAlignment="Left" Margin="12,65,0,0" Name="textBlockVersion" Text="Version: 2.0.0" VerticalAlignment="Top" Width="224" FontSize="32" Foreground="{StaticResource BlueFontKey}" />
-        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="12,139,0,0" Name="textBlockAuthor" Text="Created by HighFunStudio" VerticalAlignment="Top" Foreground="{StaticResource BlueFontKey}" />
-        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="12,204,0,0" Name="textBlockEmail" Text="Email:" VerticalAlignment="Top" TextWrapping="Wrap" Foreground="{StaticResource BlueFontKey}"/>
-        <HyperlinkButton Content="HighFunStudio@hotmail.com" HorizontalAlignment="Left" Margin="7,253,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" FontSize="32" Foreground="{StaticResource BlueFontKey}" Click="hyperlinkButton1_Click" />
-        <HyperlinkButton Content="Review This Application" HorizontalAlignment="Left" Margin="7,326,0,0" Name="hyperlinkButton2" VerticalAlignment="Top" FontSize="32" Foreground="{StaticResource BlueFontKey}" Click="hyperlinkButton2_Click" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="400*" />
+            <RowDefinition Height="130*" />
+        </Grid.RowDefinitions>
+        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="15,10,0,0" Name="textBlockVersion" Text="Version: 1.1.0" VerticalAlignment="Top" Width="224" />
+        <TextBlock FontSize="32" HorizontalAlignment="Left" Margin="15,66,0,0" Name="textBlockAuthor" Text="Created by HighFunStudio" VerticalAlignment="Top" />
+        <HyperlinkButton Content="HighFunStudio@hotmail.com" FontSize="28" HorizontalAlignment="Left" Margin="10,133,0,0" Name="hyperlinkButton1" VerticalAlignment="Top" Click="hyperlinkButton1_Click" Foreground="{StaticResource BluePvoitKey}" />
+        <HyperlinkButton Content="Review This Application" FontSize="32" HorizontalAlignment="Left" Margin="10,200,0,0" Name="hyperlinkButtonReview" VerticalAlignment="Top" Click="hyperlinkButton2_Click" Foreground="{StaticResource BluePvoitKey}" />
+        <HyperlinkButton Content="More Applications!" HorizontalAlignment="Center" Name="hyperlinkButtonApp" VerticalAlignment="Top" FontSize="32" Click="hyperlinkButtonApp_Click" Margin="0,284,0,0" Foreground="{StaticResource BluePvoitKey}" />
+        <TextBlock Name="textblockUpdateInfo" Grid.Row="1" Margin="20,10" TextWrapping="Wrap" />
     </Grid>
  
-    <!--Sample code showing usage of ApplicationBar-->
-    <!--<phone:PhoneApplicationPage.ApplicationBar>
-        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
-            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
-            <shell:ApplicationBar.MenuItems>
-                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
-                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
-            </shell:ApplicationBar.MenuItems>
-        </shell:ApplicationBar>
-    </phone:PhoneApplicationPage.ApplicationBar>-->
-
 </phone:PhoneApplicationPage>
