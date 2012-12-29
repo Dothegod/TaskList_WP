@@ -149,7 +149,7 @@
                         AdPositionID="90027413"
                         AdInterval="20"
                         AdAnimation="AdAnimationFlipFromLeft"
-                        Grid.Row="1" IsDebugMode="False" VerticalAlignment="Bottom" HorizontalAlignment="Center" MouseLeftButtonUp="adView1_MouseLeftButtonUp" Loaded="adView1_Loaded" AdViewEvent="adView1_AdViewEvent" AdViewFullscreenEvent="adView1_AdViewFullscreenEvent" />
+                        Grid.Row="1" IsDebugMode="False" VerticalAlignment="Bottom" HorizontalAlignment="Center" AdViewEvent="adView1_AdViewEvent" AdViewFullscreenEvent="adView1_AdViewFullscreenEvent" />
 
     </Grid>
  

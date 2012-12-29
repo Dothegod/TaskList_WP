@@ -260,49 +260,15 @@ namespace TaskList
 
         }
         #region  AD_Control
-        private static Visibility m_ADVisibility = Visibility.Visible;
-        private bool IsshowAD = false;
-        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)   //当页面成为非活动的时候 的事件
-        {
-            if (IsshowAD)
-            {
-                adView1.Visibility = m_ADVisibility;
-
-                IsshowAD = false;
-            }
-        }
-
-        private void adView1_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
-        {
-            if (IsshowAD == false)
-            {
-                return;
-            }
-            m_ADVisibility = Visibility.Collapsed;
-            e.Handled = false;
-        }
-        private void adView1_Loaded(object sender, RoutedEventArgs e)
-        {
-            adView1.Visibility = m_ADVisibility;
-        }
         private void adView1_AdViewEvent(object sender, SmartMad.Ads.WindowsPhone7.WPF.AdViewEventArgs args)
         {
-            if (args.code == AdViewEventCode.EVENT_NEWAD)
-            {
-                IsshowAD = true;
-            }
-            else
-            {
-                IsshowAD = false;
-            }
         }
         private void adView1_AdViewFullscreenEvent(object sender, AdViewFullscreenEventArgs args)
         {
-            if (IsshowAD)
+            if (!args.fullscreen)
             {
-                adView1.Visibility = m_ADVisibility;
-
-                IsshowAD = false;
+                adView1.IsEnabled = false;
+                this.LayoutRoot.Children.Remove(adView1);
             }
         }
         #endregion
