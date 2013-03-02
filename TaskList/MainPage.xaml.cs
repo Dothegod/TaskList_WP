@@ -1,18 +1,13 @@
-﻿using System;
+﻿using Microsoft.Phone.Controls;
+using Microsoft.Phone.Shell;
+using SmartMad.Ads.WindowsPhone7.WPF;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Animation;
-using System.Windows.Shapes;
-using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
-using Microsoft.Phone.Tasks;
-using SmartMad.Ads.WindowsPhone7.WPF;
+using System.Windows.Navigation;
 //using ScheduledTaskAgent2;
 
 namespace TaskList
@@ -100,6 +95,17 @@ namespace TaskList
         // Load data for the ViewModel Items
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
+        }
+
+        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)   //当页面成为非活动的时候 的事件
+        {
+            SaveData();
+            base.OnNavigatedFrom(e);
+        }
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            LoadData();
+            base.OnNavigatedTo(e);
         }
 
         private void ApplicationBarAddTask(object sender, EventArgs e)
