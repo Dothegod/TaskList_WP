@@ -97,16 +97,16 @@ namespace TaskList
         {
         }
 
-        protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)   //当页面成为非活动的时候 的事件
-        {
-            SaveData();
-            base.OnNavigatedFrom(e);
-        }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            LoadData();
-            base.OnNavigatedTo(e);
-        }
+//         protected override void OnNavigatedFrom(System.Windows.Navigation.NavigationEventArgs e)   //当页面成为非活动的时候 的事件
+//         {
+//             SaveData();
+//             base.OnNavigatedFrom(e);
+//         }
+//         protected override void OnNavigatedTo(NavigationEventArgs e)
+//         {
+//             LoadData();
+//             base.OnNavigatedTo(e);
+//         }
 
         private void ApplicationBarAddTask(object sender, EventArgs e)
         {

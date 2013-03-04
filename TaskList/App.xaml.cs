@@ -85,6 +85,10 @@ namespace TaskList
         private void Application_Activated(object sender, ActivatedEventArgs e)
         {
             // Ensure that application state is restored appropriately
+            if (mainPage != null)
+            {
+                mainPage.LoadData();
+            }
 
         }
 
@@ -92,6 +96,11 @@ namespace TaskList
         // This code will not execute when the application is closing
         private void Application_Deactivated(object sender, DeactivatedEventArgs e)
         {
+            if (mainPage != null)
+            {
+                mainPage.SaveData();
+            }
+
         }
 
         // Code to execute when the application is closing (eg, user hit Back)
